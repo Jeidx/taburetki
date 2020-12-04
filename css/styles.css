@@ -14,6 +14,7 @@ header{
 .wrapper{
     width: 1110px;
     margin: 0 auto;
+    padding: auto 25px;
 }
 .header-navigation{
     background: #E5E5E5;
@@ -41,6 +42,7 @@ header{
 }
 .header-services{
     height: 200px;
+    padding: 5px 15px;
 }
 .header__search{
     display: flex;
@@ -49,6 +51,11 @@ header{
     justify-content: space-between;
 }
 .header__search-logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.header__search-logo__img{
     display: flex;
     align-items: center;
 }
@@ -170,6 +177,7 @@ header{
 }
 .main-container{
     color: #fff;
+    padding-left: 20px;
 }
 .main-title{
     font-size: 48px;
@@ -224,9 +232,10 @@ header{
     margin-top: 38px;
     display: flex;
     margin-bottom: 100px;
+    flex-wrap: wrap;
+  justify-content: space-between;
 }
 .product-part__list-item{
-    margin-right: 30px;
     background: #fff;
     width: 255px;
     padding: 25px 30px 120px 30px;
@@ -236,15 +245,17 @@ header{
     overflow: hidden;
     transition: all 0.3s;
     position: relative;
+    margin-top: 5px;
 }
+
 .product-part__list-item:hover{
     transform: translateY(-10px);
     -webkit-box-shadow: 0px 10px 0px -5px #F13C6E; 
     box-shadow: 0px 10px 0px -5px #F13C6E;
 }
-.product-part__list-item:last-child{
+/* .product-part__list-item:last-child{
     margin-right: 0;
-}
+} */
 .product-part__list-item__img{
     margin-left: 40px;
 
@@ -301,9 +312,10 @@ header{
     display: flex;
     justify-content: space-between;
     margin-bottom: 100px;
+    
 }
 .product-part__gifts__input{
-    width: 540px;
+    max-width: 540px;
     min-height: 212px;
     background: #F13C6E;
     display: flex;
@@ -364,6 +376,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 80px;
+    justify-content: center;
 }
 .our-clients-list__item{
     display: flex;
@@ -371,6 +384,7 @@ header{
     min-width: 270px;
     height: 110px; 
     background-color: #fff;
+    margin: 2px ;
 }
 .pr-list_watched{
     margin-bottom: 0 !important;
@@ -467,6 +481,10 @@ display: flex;
 .footer-social-links__list__item a:hover .svg-item path{
     fill: #000;
 }
+.footer__wrp{
+    padding: 5px 15px;
+}
+
 
 .footer__info{
     padding: 25px 5px;
@@ -482,4 +500,200 @@ display: flex;
 }
 .footer__info__container__item:hover{
     cursor: default;
+}
+.burger-menu{
+    position: relative;
+    display: none;
+}
+.burger{
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+}
+.burger::after{
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    top: -6px; 
+}
+.burger::before{
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    bottom: -6px;
+}
+
+
+/* MEDIA */
+
+
+@media screen and (max-width: 1131px) {
+    .wrapper{
+        width: 100%;
+        padding: auto 25px;
+    }
+    .product-part__title{
+        text-align: center;
+    }
+    .product-part__list{
+        justify-content: center;
+    }
+    .product-part__list-item{
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+    /* .product-part__list-item:last-child{
+        
+    } */
+    .product-part__gifts{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .product-part__gifts__input{
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    .product-part__gifts__input:last-child{
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width: 1119px) {
+    .product-part__list{
+       
+        margin: 38px auto 20px auto;
+    }
+    .product-part__our-clients-list{
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 990px) {
+    .header-navigation{
+        display: none;
+    }
+    .burger-menu{
+        display: block;
+    }
+    .header__pagination{
+        display: none;
+    }
+    .header-services{
+        height: auto;
+    }
+    .header__search{
+        flex-direction: column;
+        height: auto;
+        position: relative;
+    }
+    .header__search-logo{
+        width: 80%;
+    }
+    .header__search div{
+        margin: 15px 0;
+    }
+    .header__search-input{
+        order: 3;
+    }
+    .footer__categories-container{
+        flex-wrap: wrap;
+        justify-content: space-around;
+      
+    }
+    .footer__categories-container__item{
+        margin:20px 45px 20px 10px;
+
+    }
+    .footer__bootom-list{
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .footer-feedback-list{
+        flex-flow: column wrap;
+    }
+    .footer-feedback-list li{
+        margin: 10px;
+    }
+    .footer__info__container{
+        flex-wrap: wrap;
+    }
+    .footer__info__container__item:first-child{
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+    .footer__info__container span{
+        font-size: 10px;
+    }
+
+ 
+}
+@media screen and (max-width: 728px) {
+    .info{
+        padding-top: 40px;
+        padding-bottom: 60px;
+        padding-left: 30px;
+        padding-right: 30px;
+        height: auto;
+    }
+    .product-part__list{
+        width: 100%;
+    }
+    .footer__categories-container__item__list-of-variables{
+        margin-top: 15px;
+    }
+    footer{
+        padding-top: 20px;
+    }
+    .footer__bootom-list{
+        margin-top: 10px;
+    }
+    .footer__categories-container__item__list-of-variables__item{
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 530px) {
+    .product-part__gifts__input{
+        text-align: center;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+   .product-part__gifts__input-card{
+        margin: 0;
+    }
+    .product-part__gifts__input__img{
+        margin: 20px 0;
+    }
+    .feedback-btn a{
+        padding: 10px 20px;
+       
+    }
+    .footer_btn-feedback{
+        margin-top: 35px;
+    }
+    .footer-feedback__data{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-title{
+        font-size: 30px;
+    }
+    
+}
+@media screen and (max-width:375px) {
+    .header__search-feedback{
+        flex-direction: column;
+    }
+    .feedback-btn{
+        margin-top: 35px;
+    }
+    .feedback-number a{
+        margin-right: 0;
+    }
 }
